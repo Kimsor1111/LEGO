@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEGO</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="src/output.css" />
+    <link rel="icon" href="asset/lego_logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="m-0 p-0 relative">
+    <!-- LOGIN -->
+    <div
+      class="login hidden w-full h-screen bg-black/40 absolute z-[101] justify-center items-center"
+    >
+      <div
+        class="max-w-[400px] w-[90%] h-[400px] rounded-[20px] bg-white flex flex-col items-center"
+      >
+        <div
+          class="w-full h-[40px] flex justify-center items-center relative pt-4"
+        >
+          <p class="absolute right-4 top-4 cursor-pointer">
+            <i class="close-login fa-solid fa-x text-black"></i>
+          </p>
+          <img
+            class="w-[150px] object-contain"
+            src="asset/insiderlogo.png"
+            alt=""
+          />
+        </div>
+        <div class="w-[90%] h-fit flex flex-col items-center mt-10 gap-8">
+          <h1 class="text-xl font-['Noto Sans'] font-[500]">
+            Sign In to Your LEGO Account
+          </h1>
+          <button
+            class="w-[90%] h-[55px] bg-white rounded-[50px] border-2 border-blue-500 font-['Poppins'] font-semibold hover:bg-blue-100"
+          >
+            Sign In
+          </button>
+          <p class="text-lg font-['Noto Sans']">
+            Don't have an account?
+            <a class="text-[blue] underline text-[14px] ml-3" href=""
+              >Register</a
+            >
+          </p>
+        </div>
+        <hr class="w-[90%] border border-gray-400 my-6" />
+        <div
+          class="w-[90%] h-[50px] flex flex-row justify-center gap-5 items-center"
+        >
+          <i class="fa-solid fa-truck text-4xl"></i>
+          <a
+            href=""
+            class="text-blue-500 text-md font-['Poppins'] hover:underline"
+            >Check Order Status</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header
+      class="lg:bg-white bg-gray-100 w-full h-[60px] flex justify-between items-center px-2"
+    >
+      <div class="w-[120px] h-full flex justify-center items-center">
+        <button
+          class="w-[90%] h-1/2 bg-[#abd9ff] rounded-[3px] font-[600] text-[12px] shadow-2xl uppercase hover:bg-slate-300 flex flex-row justify-center items-center"
+        >
+          <i class="fa-solid fa-arrow-left mr-[6px]"></i>
+          <p class="font-['Poppins'] text-[10px]">Play Zone</p>
+        </button>
+      </div>
+      <div
+        class="lg:flex w-[500px] p-0 ml-20 h-full hidden justify-center items-center relative"
+      >
+        <i
+          class="header-prev fa-solid fa-less-than absolute left-0 cursor-pointer w-[50px] h-full bg-white flex justify-center items-center"
+        ></i>
+        <div class="slider-header w-full h-full overflow-x-hidden">
+          <div class="w-[1000px] h-full flex">
+            <p
+              class="w-full h-full flex justify-center items-center text-[9px] font-['Poppins']"
+            >
+              Get a Botanicals Mixed Flowerpot with purchases of $150 or more.
+              <a href="" class="pl-1 text-[#1aaefd] hover:underline"
+                >Learn More</a
+              >
+            </p>
+            <p
+              class="w-full h-full flex justify-center items-center text-[9px] font-['Poppins']"
+            >
+              FREE Shipping with orders over $35!*
+              <a href="" class="pl-1 text-[#1aaefd] hover:underline"
+                >Learn More</a
+              >
+            </p>
+          </div>
+        </div>
+        <i
+          class="header-next bg-white flex justify-center items-center w-[50px] h-full fa-solid fa-greater-than absolute right-0 cursor-pointer"
+        ></i>
+      </div>
+      <div class="lg:w-[200px] w-[150px] h-[35px] flex flex-row">
+        <div
+          class="lego-login w-1/2 h-full flex flex-row border-r-[2px] border-gray-500/80 cursor-pointer"
+        >
+          <div class="w-[40%] h-full">
+            <img
+              class="w-full h-full object-contain"
+              src="asset/headlogo.png"
+              alt=""
+            />
+          </div>
+          <p
+            class="text-[10px] font-semibold h-full w-[60%] flex justify-center items-center font-['Poppins']"
+          >
+            Sign In
+          </p>
+        </div>
+        <div class="w-1/2 h-full flex flex-row cursor-pointer">
+          <div class="w-[40%] h-full">
+            <img
+              class="w-full h-full object-contain"
+              src="asset/insider.png"
+              alt=""
+            />
+          </div>
+          <p
+            class="text-[10px] font-semibold h-full w-[60%] flex justify-center items-center font-['Poppins']"
+          >
+            Insiders
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- SUBMENU-LG -->
+    <div
+      class="submenu-container lg:block hidden w-full h-screen bg-black/40 absolute z-[103] top-0 -translate-x-[100%]"
+    >
+      <div
+        class="submenu -translate-x-[100%] duration-500 w-[600px] h-full bg-white relative"
+      >
+        <i
+          class="closesubmenu fa-solid fa-x absolute right-[20px] top-[20px] text-xl cursor-pointer"
+        ></i>
+        <div
+          class="submenu-ul w-full h-fit block absolute top-[140px] pl-[125px]"
+        >
+          <ul class="w-full h-fit flex flex-col gap-5">
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                Exclusive
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                Brick & Pieces
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                Interests
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                LEGO Decor
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                LEGO Machindise
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                New
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                Bestsellers
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                Offers & Sale
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                Gift cards
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                Coming Soon
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                Retiring Soon
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="submenu-ul w-full h-fit hidden absolute top-[140px] pl-[125px]"
+        >
+          <ul class="w-full h-fit flex flex-col gap-5">
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                Live Streams
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                All LEGO Theme
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                All LEGO Interests
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                Find inspiration
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                Adults welcome
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                For Families
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                Preschool
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                LEGO Fortnite
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                LEGO Insider
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                LEGO Mosaic Maker
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                LEGO Gift Ideas
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="submenu-ul w-full h-fit hidden absolute top-[140px] pl-[125px]"
+        >
+          <ul class="w-full h-fit flex flex-col gap-5">
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                Check Order Status
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                Delivery & Returns
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                Find a LEGO Store
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                Find building instructions
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                Common Questions
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                Contact Us
+              </p>
+            </li>
+            <li>
+              <p
+                class="font-['Poppins'] cursor-pointer hover:underline text-[#2d2d2ddd] hover:text-black"
+              >
+                Replacement Parts
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUBMENU -->
+    <div
+      class="submenu-md-container lg:hidden -translate-x-[100%] block w-full h-screen absolute top-0 z-[105] bg-black/40"
+    >
+      <div
+        class="submenuli-container absolute -translate-x-[100%] md:w-[500px] w-full h-full z-[106] bg-white"
+      >
+        <div
+          class="submenuli-el duration-500 -translate-x-[100%] absolute w-full h-[50px] border-b-4 border-[#ffd602] flex items-center"
+        >
+          <i
+            class="closesubmenuli-md fa-solid fa-less-than absolute left-3 cursor-pointer"
+          ></i>
+          <p class="ml-10 font-semibold text-lg font-['Poppins']">Menu</p>
+          <div class="submenu-ul w-full h-fit block absolute top-[50px] px-3">
+            <ul class="w-full h-fit flex flex-col">
+              <li class="w-full px-2 h-[50px]">
+                <p
+                  class="w-full h-full flex items-center text-xl font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  SHOP
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-y-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  Exclusive
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  Brick & Pieces
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  Interests
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  LEGO Decor
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  LEGO Machindise
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  New
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  Bestsellers
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  Offers & Sale
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  Gift cards
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  Coming Soon
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  Retiring Soon
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="submenuli-el duration-500 -translate-x-[100%] w-full h-[50px] border-b-4 border-[#ffd602] absolute items-center flex"
+        >
+          <i
+            class="closesubmenuli-md fa-solid fa-less-than absolute left-3 cursor-pointer"
+          ></i>
+          <p class="ml-10 font-semibold text-lg font-['Poppins']">Menu</p>
+          <div class="submenu-ul w-full h-fit block absolute top-[50px] px-3">
+            <ul class="w-full h-fit flex flex-col">
+              <li class="w-full px-2 h-[50px]">
+                <p
+                  class="w-full h-full flex items-center text-xl font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  DISCOVER
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-y-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  Live Streams
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  All LEGO Theme
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  All LEGO Interests
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  Find inspiration
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  Adult Welcome
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  For Families
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  Preschool
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  LEGO Fornite
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  LEGO Insider
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  LEGO Mosaic Maker
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  LEGO Gift Ideas
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="submenuli-el duration-500 -translate-x-[100%] w-full h-[50px] border-b-4 border-[#ffd602] flex items-center absolute"
+        >
+          <i
+            class="closesubmenuli-md fa-solid fa-less-than absolute left-3 cursor-pointer"
+          ></i>
+          <p class="ml-10 font-semibold text-lg font-['Poppins']">Menu</p>
+          <div class="submenu-ul w-full h-fit block absolute top-[50px] px-3">
+            <ul class="w-full h-fit flex flex-col">
+              <li class="w-full px-2 h-[50px]">
+                <p
+                  class="w-full h-full flex items-center text-xl font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  HELP
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-y-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  Check Order Status
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  Delivery & Return
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  Find a LEGO Store
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  Find Building Instruction
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  Common Questions
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  Contact Us
+                </p>
+              </li>
+              <li
+                class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+              >
+                <p
+                  class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+                >
+                  Replacement Part
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="submenu-md md:w-[500px] w-full h-full -translate-x-[100%] duration-500 bg-white"
+      >
+        <div
+          class="w-full h-[50px] border-b-4 border-[#ffd602] flex items-center relative"
+        >
+          <p class="ml-5 font-semibold text-lg font-['Poppins']">Menu</p>
+          <i
+            class="closesubmenu-md fa-solid fa-x absolute right-3 cursor-pointer"
+          ></i>
+        </div>
+        <div class="w-full h-fit px-4">
+          <ul class="w-full h-fit">
+            <li
+              class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd] flex items-center"
+            >
+              <p
+                class="text-[12px] font-semibold text-red-500 cursor-pointer font-['Poppins']"
+              >
+                LEGO F1
+              </p>
+            </li>
+            <li class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]">
+              <p
+                class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+              >
+                HOME
+              </p>
+            </li>
+            <li class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]">
+              <p
+                class="submenu-li w-full h-full text-[12px] font-semibold flex justify-between items-center text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+              >
+                <span>SHOP</span>
+                <i class="fa-solid fa-greater-than"></i>
+              </p>
+            </li>
+            <li
+              class="submenu-li w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]"
+            >
+              <p
+                class="w-full h-full text-[12px] font-semibold flex justify-between items-center text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+              >
+                DISCOVER <i class="fa-solid fa-greater-than"></i>
+              </p>
+            </li>
+            <li class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]">
+              <p
+                class="submenu-li w-full h-full text-[12px] font-semibold flex justify-between items-center text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+              >
+                HELP <i class="fa-solid fa-greater-than"></i>
+              </p>
+            </li>
+            <li class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]">
+              <p
+                class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+              >
+                My Wishlist
+              </p>
+            </li>
+            <li class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]">
+              <p
+                class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+              >
+                My Bag (0)
+              </p>
+            </li>
+            <li class="w-full px-2 h-[50px] border-b-[1px] border-[#4a4a4acd]">
+              <p
+                class="w-full h-full flex items-center text-[12px] font-semibold text-gray-800 hover:text-black cursor-pointer font-['Poppins']"
+              >
+                <i class="fa-solid fa-location-dot pr-2 text-lg"></i> Cambodia
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <div
+      class="lg:h-[80px] lg:bg-[#ffd602] lg:border-b-0 border-b-4 border-[#ffd602] w-full h-[60px] bg-white px-4 flex flex-row items-center justify-between"
+    >
+      <div class="menulogo w-fit h-full flex items-center z-[104]">
+        <div class="menubar mr-5 lg:hidden block">
+          <i class="openSubmenu fa-solid fa-bars cursor-pointer text-2xl"></i>
+        </div>
+        <div class="lg:w-[60px] lg:h-[60px] w-[40px] h-[40px]">
+          <img src="asset/lego_logo.svg" alt="" />
+        </div>
+        <ul
+          class="lg:flex hidden w-fit h-[60px] ml-[50px] flex-row gap-5 items-center"
+        >
+          <li class="w-fit h-1/2 font-['Poppins'] text-md font-medium">
+            <p
+              class="navLink relative w-full h-full flex justify-center items-center after:duration-500 after:content-[''] after:w-0 after:h-[3px] after:bg-black after:absolute after:left-0 after:bottom-0 hover:after:w-full cursor-pointer"
+            >
+              SHOP
+            </p>
+          </li>
+          <li class="w-fit h-1/2 mx-5 font-['Poppins'] text-md font-medium">
+            <p
+              class="navLink relative w-full h-full flex justify-center items-center after:duration-500 after:content-[''] after:w-0 after:h-[3px] after:bg-black after:absolute after:left-0 after:bottom-0 hover:after:w-full cursor-pointer"
+            >
+              DISCOVER
+            </p>
+          </li>
+          <li class="w-fit h-1/2 font-['Poppins'] text-md font-medium">
+            <p
+              class="navLink relative w-full h-full flex justify-center items-center after:duration-500 after:content-[''] after:w-0 after:h-[3px] after:bg-black after:absolute after:left-0 after:bottom-0 hover:after:w-full cursor-pointer"
+            >
+              HELP
+            </p>
+          </li>
+          <li
+            class="w-fit h-1/2 font-['Poppins'] ml-2 text-md rounded-[2px] text-[#dc0000] bg-white hover:bg-black hover:text-white"
+          >
+            <a
+              class="w-full h-full px-6 flex justify-center items-center"
+              href=""
+              >LEGO F1</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="w-fit h-full flex items-center gap-3">
+        <div
+          class="w-[40px] h-[40px] bg-white rounded-full flex justify-center items-center"
+        >
+          <i class="fa-solid fa-magnifying-glass text-lg cursor-pointer"></i>
+        </div>
+        <div class="w-[40px] h-[40px] flex justify-center items-center">
+          <i class="fa-regular fa-heart text-lg cursor-pointer"></i>
+        </div>
+        <div class="w-[40px] h-[40px] flex justify-center items-center">
+          <i class="fa-solid fa-shopping-bag text-lg cursor-pointer"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
