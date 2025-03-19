@@ -30,7 +30,7 @@
   <body class="m-0 p-0 relative">
     <!-- LOGIN -->
     <div
-      class="login hidden w-full h-screen bg-black/40 absolute z-[101] justify-center items-center"
+      class="login hidden w-full h-screen bg-black/40 absolute z-[106] justify-center items-center"
     >
       <div
         class="max-w-[400px] w-[90%] h-[400px] rounded-[20px] bg-white flex flex-col items-center"
@@ -74,6 +74,23 @@
             >Check Order Status</a
           >
         </div>
+      </div>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search w-full h-screen bg-black/40 absolute z-[106] hidden">
+      <div
+        class="w-[280px] h-[40px] absolute right-[120px] top-[80px] flex flex-row"
+      >
+        <input
+          type="text"
+          class="w-[90%] h-full bg-white rounded-l-3xl pl-3 outline-none"
+          placeholder="Search..."
+        />
+        <i
+          class="fa-solid fa-x w-[10%] h-full flex justify-center items-center cursor-pointer bg-white rounded-r-3xl"
+          onclick="document.querySelector('.search').classList.replace('block', 'hidden')"
+        ></i>
       </div>
     </div>
 
@@ -840,6 +857,7 @@
       </div>
       <div class="w-fit h-full flex items-center gap-3">
         <div
+          onclick="document.querySelector('.search').classList.replace('hidden', 'block')"
           class="w-[40px] h-[40px] bg-white rounded-full flex justify-center items-center"
         >
           <i class="fa-solid fa-magnifying-glass text-lg cursor-pointer"></i>
@@ -850,6 +868,27 @@
         <div class="w-[40px] h-[40px] flex justify-center items-center">
           <i class="fa-solid fa-shopping-bag text-lg cursor-pointer"></i>
         </div>
+      </div>
+    </div>
+
+    <!-- BANNER -->
+    <div class="w-full h-fit bg-red-500">
+      <div class="w-full h-auto">
+        <img
+          class="lg:block hidden w-full h-auto"
+          src="asset/banner1.webp"
+          alt=""
+        />
+        <img
+          class="lg:hidden md:block hidden w-full h-auto"
+          src="asset/banner1md.webp"
+          alt=""
+        />
+        <img
+          class="md:hidden block w-full h-auto"
+          src="asset/banner1sm.webp"
+          alt=""
+        />
       </div>
     </div>
   </body>
