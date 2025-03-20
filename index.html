@@ -24,7 +24,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       ::-webkit-scrollbar {
@@ -1052,66 +1051,80 @@
           Find the perfect set
         </h1>
       </div>
-      <div class="w-full h-fit flex flex-col items-center">
+      <div class="w-full h-fit flex flex-col items-center justify-center">
         <div class="w-[95%] h-[50px] flex flex-row justify-between">
           <ul class="w-fit h-full px-2 flex flex-row items-center gap-5">
             <li
-              class="px-3 text-xl font-semibold text-gray-700/80 font-['Poppins'] cursor-pointer relative after:absolute after:content-[''] after:bottom-[-3.5px] after:left-0 after:h-[3.5px] after:bg-gray-700/80 after:w-full"
+              class="slide-li px-3 text-xl font-semibold text-gray-700/80 font-['Poppins'] cursor-pointer relative after:absolute after:content-[''] after:bottom-[-3.5px] after:left-0 after:h-[3.5px] after:bg-gray-700/80 after:w-full"
             >
               Feature Sets
             </li>
             <li
-              class="px-3 text-xl font-semibold text-gray-700/80 font-['Poppins'] cursor-pointer relative after:absolute after:content-[''] after:bottom-[-3.5px] after:left-0 after:w-0 after:h-[3.5px] after:bg-gray-700/80 hover:after:w-full"
+              class="slide-li px-3 text-xl font-semibold text-gray-700/80 font-['Poppins'] cursor-pointer relative after:absolute after:content-[''] after:bottom-[-3.5px] after:left-0 after:w-0 after:h-[3.5px] after:bg-gray-700/80 hover:after:w-full"
             >
               Popular
             </li>
             <li
-              class="px-3 text-xl font-semibold text-gray-700/80 font-['Poppins'] cursor-pointer relative after:absolute after:content-[''] after:bottom-[-3.5px] after:left-0 after:w-0 after:h-[3.5px] after:bg-gray-700/80 hover:after:w-full"
+              class="slide-li px-3 text-xl font-semibold text-gray-700/80 font-['Poppins'] cursor-pointer relative after:absolute after:content-[''] after:bottom-[-3.5px] after:left-0 after:w-0 after:h-[3.5px] after:bg-gray-700/80 hover:after:w-full"
             >
               F1 Cars
             </li>
           </ul>
-          <div class="w-fit h-full flex flex-row gap-2">
-            <button
-              class="w-[50px] h-full font-mono text-3xl border-[2.5px] border-gray-500/60 text-gray-500/60 rounded-full flex justify-center items-center font-bold"
-            >
-              &lt;
-            </button>
-            <button
-              class="w-[50px] h-full font-mono text-3xl border-[2.5px] border-black/80 text-black/80 rounded-full flex justify-center items-center font-bold"
-            >
-              &gt;
-            </button>
+        </div>
+        <div class="swiper-container block w-full">
+          <div class="swiper mySwiper1 w-[95%] md:h-[380px] h-[400px] bg-lime-500 mt-5">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide bg-red-500">
+                <div class="w-full h-[70%] bg-amber-500">
+                  <img
+                    class="w-full h-full object-center object-contain"
+                    src="asset/f1.webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="hidden w-fit h-full flex-row gap-2">
-            <button
-              class="w-[50px] h-full font-mono text-3xl border-[2.5px] border-gray-500/60 text-gray-500/60 rounded-full flex justify-center items-center font-bold"
-            >
-              &lt;
-            </button>
-            <button
-              class="w-[50px] h-full font-mono text-3xl border-[2.5px] border-black/80 text-black/80 rounded-full flex justify-center items-center font-bold"
-            >
-              &gt;
-            </button>
+          <div class="swiper-scrollbar"></div>
+        </div>
+        <div class="swiper-container hidden w-full">
+          <div class="swiper mySwiper2 w-[95%] md:h-[380px] h-[400px] bg-amber-500 mt-5">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide bg-red-500">
+                <div class="w-full h-[70%] bg-amber-500">
+                  <img
+                    class="w-full h-full object-center object-contain"
+                    src="asset/f1.webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="hidden w-fit h-full flex-row gap-2">
-            <button
-              class="w-[50px] h-full font-mono text-3xl border-[2.5px] border-gray-500/60 text-gray-500/60 rounded-full flex justify-center items-center font-bold"
-            >
-              &lt;
-            </button>
-            <button
-              class="w-[50px] h-full font-mono text-3xl border-[2.5px] border-black/80 text-black/80 rounded-full flex justify-center items-center font-bold"
-            >
-              &gt;
-            </button>
+          <div class="swiper-scrollbar"></div>
+        </div>
+        <div class="swiper-container hidden w-full">
+          <div class="swiper mySwiper3 w-[95%] md:h-[380px] h-[400px] bg-blue-500 mt-5">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide bg-red-500">
+                <div class="w-full h-[70%] bg-amber-500">
+                  <img
+                    class="w-full h-full object-center object-contain"
+                    src="asset/f1.webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
           </div>
+          <div class="swiper-scrollbar"></div>
         </div>
       </div>
     </div>
 
     <div class="mb-[500px]"></div>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
+  <script src="swiper.js"></script>
 </html>

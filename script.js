@@ -122,3 +122,21 @@ closesubmenuLi.forEach((item, index) => {
     isOpensubmenuLi = false;
   });
 });
+
+const slideLi = document.querySelectorAll(".slide-li");
+const slideContainer = document.querySelectorAll(".swiper-container")
+console.log(slideContainer)
+slideLi.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    item.classList.replace("after:w-0", "after:w-full");
+    slideContainer[index].classList.replace("hidden", "block")
+    slideLi.forEach((removeItem, removeIndex) => {
+      if (index != removeIndex) {
+        removeItem.classList.replace("after:w-full", "after:w-0");
+        slideContainer[removeIndex].classList.replace("block", "hidden")
+      }
+    });
+  });
+});
+
+
