@@ -28,10 +28,12 @@ const Login = document.querySelector(".login");
 LegoLogin.addEventListener("click", () => {
   Login.classList.add("flex");
   Login.classList.remove("hidden");
+  Body.classList.add("overflow-hidden");
 });
 CloseLogin.addEventListener("click", () => {
   Login.classList.add("hidden");
   Login.classList.remove("flex");
+  Body.classList.remove("overflow-hidden");
 });
 
 const submenuContainer = document.querySelector(".submenu-container");
@@ -66,6 +68,7 @@ closeSubmenu.addEventListener("click", () => {
   isOpensubmenu = false;
   submenuContainer.classList.replace("translate-x-0", "-translate-x-[100%]");
   subMenu.classList.replace("translate-x-0", "-translate-x-[100%]");
+  Body.classList.remove("overflow-hidden");
   navLink.forEach((item) => {
     item.classList.replace("after:w-full", "after:w-0");
   });

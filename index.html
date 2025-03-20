@@ -8,7 +8,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="src/output.css" />
     <link rel="icon" href="asset/lego_logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,6 +20,12 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
       ::-webkit-scrollbar {
         display: none;
@@ -74,23 +79,6 @@
             >Check Order Status</a
           >
         </div>
-      </div>
-    </div>
-
-    <!-- SEARCH -->
-    <div class="search w-full h-screen bg-black/40 absolute z-[106] hidden">
-      <div
-        class="w-[280px] h-[40px] absolute right-[120px] top-[80px] flex flex-row"
-      >
-        <input
-          type="text"
-          class="w-[90%] h-full bg-white rounded-l-3xl pl-3 outline-none"
-          placeholder="Search..."
-        />
-        <i
-          class="fa-solid fa-x w-[10%] h-full flex justify-center items-center cursor-pointer bg-white rounded-r-3xl"
-          onclick="document.querySelector('.search').classList.replace('block', 'hidden')"
-        ></i>
       </div>
     </div>
 
@@ -857,7 +845,6 @@
       </div>
       <div class="w-fit h-full flex items-center gap-3">
         <div
-          onclick="document.querySelector('.search').classList.replace('hidden', 'block')"
           class="w-[40px] h-[40px] bg-white rounded-full flex justify-center items-center"
         >
           <i class="fa-solid fa-magnifying-glass text-lg cursor-pointer"></i>
@@ -871,8 +858,8 @@
       </div>
     </div>
 
-    <!-- BANNER -->
-    <div class="w-full h-fit relative">
+    <!-- BIG BANNER -->
+    <div class="md:h-fit h-[680px] w-full relative">
       <div class="w-full h-auto">
         <img
           class="lg:block hidden w-full h-auto"
@@ -891,7 +878,7 @@
         />
       </div>
       <div
-        class="lg:w-[450px] md:bg-[inherit] md:w-[400px] md:top-[50%] md:translate-y-[-50%] w-full h-[230px] py-2 bg-green-700 absolute pl-10 flex flex-col gap-2"
+        class="lg:w-[450px] md:bg-[inherit] md:w-[400px] md:top-[50%] md:translate-y-[-50%] w-full h-[230px] py-4 bg-green-700 absolute pl-10 flex flex-col gap-2"
       >
         <div class="w-[50px] h-[50px]">
           <img
@@ -900,19 +887,231 @@
             alt=""
           />
         </div>
-        <h1 class="text-4xl font-['Poppins'] text-white font-bold">See what's new</h1>
+        <h1 class="text-4xl font-['Poppins'] text-white font-bold">
+          See what's new
+        </h1>
         <p class="font-['Poppins'] text-sm text-white">
           Discover even more new sets like LEGO® Jurassic World Dinosaur
           Fossils: Tyrannosaurus rex
         </p>
-        <div class="w-full h-[50px] flex flex-row gap-5 items-center px-2">
-          <button class="w-[40%] text-md rounded-3xl font-['Poppins'] font-semibold text-black h-[70%] bg-white hover:underline">Buy now &gt;</button>
-          <button class="w-[40%] text-md rounded-3xl font-['Poppins'] font-semibold text-white h-[70%] hover:text-black hover:underline hover:bg-white border-2 border-white">Shop all new &gt;</button>
+        <div class="w-full h-[60px] flex flex-row gap-5 items-center px-2">
+          <button
+            class="w-fit px-5 text-md rounded-3xl font-['Poppins'] font-[400] text-black h-[75%] bg-white hover:underline"
+          >
+            Buy now &gt;
+          </button>
+          <button
+            class="w-fit px-5 text-md rounded-3xl font-['Poppins'] font-[400] text-white h-[75%] hover:text-black hover:underline hover:bg-white border-2 border-white"
+          >
+            Shop all new &gt;
+          </button>
         </div>
       </div>
     </div>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <!-- SMALL BANNER -->
+    <div class="w-full h-fit bg-[#e3e4ec]">
+      <div
+        class="w-full h-fit flex flex-row flex-wrap justify-center items-center gap-5 px-2 py-16"
+      >
+        <div
+          class="group w-[110px] h-[120px] flex flex-col justify-between cursor-pointer"
+        >
+          <div class="w-full h-[76%]">
+            <img
+              class="w-full h-full object-contain"
+              src="asset/sbanner1.webp"
+              alt=""
+            />
+          </div>
+          <p
+            class="w-full h-[20%] text-[10px] font-medium font-['Poppins'] flex justify-center items-center group-hover:underline"
+          >
+            New
+          </p>
+        </div>
+        <div
+          class="group w-[110px] h-[120px] flex flex-col justify-between cursor-pointer"
+        >
+          <div class="w-full h-[76%]">
+            <img
+              class="w-full h-full object-contain"
+              src="asset/sbanner2.webp"
+              alt=""
+            />
+          </div>
+          <p
+            class="w-full h-[20%] text-[10px] font-medium font-['Poppins'] flex justify-center items-center group-hover:underline"
+          >
+            Exclusives
+          </p>
+        </div>
+        <div
+          class="group w-[110px] h-[120px] flex flex-col justify-between cursor-pointer"
+        >
+          <div class="w-full h-[76%]">
+            <img
+              class="w-full h-full object-contain"
+              src="asset/sbanner3.webp"
+              alt=""
+            />
+          </div>
+          <p
+            class="w-full h-[20%] text-[10px] font-medium font-['Poppins'] flex justify-center items-center group-hover:underline"
+          >
+            Offers
+          </p>
+        </div>
+        <div
+          class="group w-[110px] h-[120px] flex flex-col justify-between cursor-pointer"
+        >
+          <div class="w-full h-[76%]">
+            <img
+              class="w-full h-full object-contain"
+              src="asset/sbanner4.webp"
+              alt=""
+            />
+          </div>
+          <p
+            class="w-full h-[20%] text-[10px] font-medium font-['Poppins'] flex justify-center items-center group-hover:underline"
+          >
+            All Sets
+          </p>
+        </div>
+        <div
+          class="group w-[110px] h-[120px] flex flex-col justify-between cursor-pointer"
+        >
+          <div class="w-full h-[76%]">
+            <img
+              class="w-full h-full object-contain"
+              src="asset/sbanner5.webp"
+              alt=""
+            />
+          </div>
+          <p
+            class="w-full h-[20%] text-[10px] font-medium font-['Poppins'] flex justify-center items-center group-hover:underline"
+          >
+            Adult
+          </p>
+        </div>
+        <div
+          class="group w-[110px] h-[120px] flex flex-col justify-between cursor-pointer"
+        >
+          <div class="w-full h-[76%]">
+            <img
+              class="w-full h-full object-contain"
+              src="asset/sbanner6.webp"
+              alt=""
+            />
+          </div>
+          <p
+            class="w-full h-[20%] text-[10px] font-medium font-['Poppins'] flex justify-center items-center group-hover:underline"
+          >
+            Easter
+          </p>
+        </div>
+        <div
+          class="group w-[110px] h-[120px] flex flex-col justify-between cursor-pointer"
+        >
+          <div class="w-full h-[76%]">
+            <img
+              class="w-full h-full object-contain"
+              src="asset/sbanner7.webp"
+              alt=""
+            />
+          </div>
+          <p
+            class="w-full h-[20%] text-[10px] font-medium font-['Poppins'] flex justify-center items-center group-hover:underline"
+          >
+            Pokemon
+          </p>
+        </div>
+        <div
+          class="group w-[110px] h-[120px] flex flex-col justify-between cursor-pointer"
+        >
+          <div class="w-full h-[76%]">
+            <img
+              class="w-full h-full object-contain"
+              src="asset/sbanner8.webp"
+              alt=""
+            />
+          </div>
+          <p
+            class="w-full h-[20%] text-[10px] font-medium font-['Poppins'] flex justify-center items-center group-hover:underline"
+          >
+            Rewards
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDER -->
+    <div class="w-full h-fit mt-20 py-5">
+      <div class="w-full h-fit py-5 flex justify-center mb-8 items-center">
+        <h1 class="text-3xl font-['Poppins'] font-semibold">
+          Find the perfect set
+        </h1>
+      </div>
+      <div class="w-full h-fit flex flex-col items-center">
+        <div class="w-[95%] h-[50px] flex flex-row justify-between">
+          <ul class="w-fit h-full px-2 flex flex-row items-center gap-5">
+            <li
+              class="px-3 text-xl font-semibold text-gray-700/80 font-['Poppins'] cursor-pointer relative after:absolute after:content-[''] after:bottom-[-3.5px] after:left-0 after:h-[3.5px] after:bg-gray-700/80 after:w-full"
+            >
+              Feature Sets
+            </li>
+            <li
+              class="px-3 text-xl font-semibold text-gray-700/80 font-['Poppins'] cursor-pointer relative after:absolute after:content-[''] after:bottom-[-3.5px] after:left-0 after:w-0 after:h-[3.5px] after:bg-gray-700/80 hover:after:w-full"
+            >
+              Popular
+            </li>
+            <li
+              class="px-3 text-xl font-semibold text-gray-700/80 font-['Poppins'] cursor-pointer relative after:absolute after:content-[''] after:bottom-[-3.5px] after:left-0 after:w-0 after:h-[3.5px] after:bg-gray-700/80 hover:after:w-full"
+            >
+              F1 Cars
+            </li>
+          </ul>
+          <div class="w-fit h-full flex flex-row gap-2">
+            <button
+              class="w-[50px] h-full font-mono text-3xl border-[2.5px] border-gray-500/60 text-gray-500/60 rounded-full flex justify-center items-center font-bold"
+            >
+              &lt;
+            </button>
+            <button
+              class="w-[50px] h-full font-mono text-3xl border-[2.5px] border-black/80 text-black/80 rounded-full flex justify-center items-center font-bold"
+            >
+              &gt;
+            </button>
+          </div>
+          <div class="hidden w-fit h-full flex-row gap-2">
+            <button
+              class="w-[50px] h-full font-mono text-3xl border-[2.5px] border-gray-500/60 text-gray-500/60 rounded-full flex justify-center items-center font-bold"
+            >
+              &lt;
+            </button>
+            <button
+              class="w-[50px] h-full font-mono text-3xl border-[2.5px] border-black/80 text-black/80 rounded-full flex justify-center items-center font-bold"
+            >
+              &gt;
+            </button>
+          </div>
+          <div class="hidden w-fit h-full flex-row gap-2">
+            <button
+              class="w-[50px] h-full font-mono text-3xl border-[2.5px] border-gray-500/60 text-gray-500/60 rounded-full flex justify-center items-center font-bold"
+            >
+              &lt;
+            </button>
+            <button
+              class="w-[50px] h-full font-mono text-3xl border-[2.5px] border-black/80 text-black/80 rounded-full flex justify-center items-center font-bold"
+            >
+              &gt;
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-[500px]"></div>
   </body>
   <script src="script.js"></script>
 </html>
