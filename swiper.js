@@ -7,7 +7,7 @@ var swiper1 = new Swiper(".mySwiper1", {
   },
   breakpoints: {
     0: {
-      slidesPerView: 2,
+      slidesPerView: 1,
     },
     768: {
       slidesPerView: 3,
@@ -29,7 +29,7 @@ var swiper1 = new Swiper(".mySwiper2", {
   },
   breakpoints: {
     0: {
-      slidesPerView: 2,
+      slidesPerView: 1,
     },
     768: {
       slidesPerView: 3,
@@ -51,7 +51,7 @@ var swiper1 = new Swiper(".mySwiper3", {
   },
   breakpoints: {
     0: {
-      slidesPerView: 2,
+      slidesPerView: 1,
     },
     768: {
       slidesPerView: 3,
